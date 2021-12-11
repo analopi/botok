@@ -31,9 +31,11 @@ namespace Bot.Controllers
 
         // POST: CallbackController/Create
         [HttpPost]
-        public ActionResult Create(IFormCollection collection)
+        public IActionResult Callback(string jsonString)
         {
-            return Content("ae02c630");
+
+            JsonConvert.DeserializeObject<Product>(jsonString);
+            return Ok("ok");
         }
 
     }
