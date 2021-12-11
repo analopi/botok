@@ -15,7 +15,7 @@ namespace Bot.Controllers
 
         // POST: CallbackController/Create
         [HttpPost]
-        public IActionResult Callback([FromForm] Updates updates)
+        public IActionResult Callback([FromBody] Updates updates)
         {
             // Проверяем, что находится в поле "type" 
             switch (updates.Type)
