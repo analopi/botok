@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using BOT.Controllers;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -31,12 +32,19 @@ namespace Bot.Controllers
 
         // POST: CallbackController/Create
         [HttpPost]
-        public IActionResult Callback(string jsonString)
+        public IActionResult Callback([FromBody] Updates updates)
         {
-
-            JsonConvert.DeserializeObject<Product>(jsonString);
+            // Проверяем, что находится в поле "type" 
+            switch (updates.Type)
+            {
+                // Если это уведомление для подтверждения адреса
+                case "confirmation":
+                    // Отправляем строку для подтверждения 
+                    return Ok("ae02c630");
+            }
+            // Возвращаем "ok" серверу Callback API
             return Ok("ok");
-        }
 
+        }
     }
 }

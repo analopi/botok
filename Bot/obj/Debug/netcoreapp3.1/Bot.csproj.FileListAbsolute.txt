@@ -36,3 +36,4 @@ C:\Users\vitk2\source\repos\Bot\Bot\obj\Debug\netcoreapp3.1\Bot.genruntimeconfig
 C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\Npgsql.dll
 C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
