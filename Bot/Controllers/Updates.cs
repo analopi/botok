@@ -9,7 +9,7 @@ using Newtonsoft.Json.Linq;
 namespace BOT.Controllers
 {
 	[Serializable]
-	public class Updates : Controller
+	public class Updates
 	{
 
 		/// <summary>
