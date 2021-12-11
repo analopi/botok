@@ -47,10 +47,6 @@ C:\Users\vitk2\source\repos\Bot\Bot\obj\Debug\netcoreapp3.1\Bot.csproj.CopyCompl
 C:\Users\vitk2\source\repos\Bot\Bot\obj\Debug\netcoreapp3.1\Bot.dll
 C:\Users\vitk2\source\repos\Bot\Bot\obj\Debug\netcoreapp3.1\Bot.pdb
 C:\Users\vitk2\source\repos\Bot\Bot\obj\Debug\netcoreapp3.1\Bot.genruntimeconfig.cache
-C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
-C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
-C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
 C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
 C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
@@ -58,3 +54,6 @@ C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\runtimes\win-x64\nat
 C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\Npgsql.dll
+C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
