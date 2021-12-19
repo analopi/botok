@@ -25,6 +25,7 @@ namespace BOT.Controllers
 		[JsonProperty("object")]
 		public JObject Object { get; set; }
 
+
 		/// <summary>
 		/// ID сообщества, в котором произошло событие
 		/// </summary>
