@@ -5,9 +5,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Text;
+
 namespace Bot.Controllers
 {
     [ApiController]
@@ -16,6 +19,7 @@ namespace Bot.Controllers
     {
         private readonly IConfiguration _configuration;
 
+        
         public CallbackController(IConfiguration configuration)
         {
             _configuration = configuration;
@@ -25,22 +29,20 @@ namespace Bot.Controllers
         [HttpPost]
         public IActionResult Callback([FromBody] Updates updates)
         {
-            // Проверяем, что находится в поле "type" 
+            // Проверяем, что находится в поле "type"
+            var webClient = new WebClient() { Encoding = Encoding.UTF8 };
             switch (updates.Type)
             {
+                
                 // Если это уведомление для подтверждения адреса
                 case "confirmation":
                     // Отправляем строку для подтверждения 
                     return Ok("ae02c630");
                 case "message_new":
-                    var col = updates.Object;
-                    string token = _configuration["Config:AccessToken"];
-                    string urlresp = $"https://api.vk.com/method/messages.send?v=5.131&access_token={token}&user_id=";
-                    string msg = col["message"]["body"].ToString();
-                    var ready = (urlresp + "{0}&message={1}",col["message"]["from_id"].ToString(),$"Ну привет ботяра");
-                    if (msg == "Привет")
-                        return Ok(ready);
-                    else return (null);
+                    //return Json(updates.Message);
+                    return Content($"https://api.vk.com/method/messages.send?v=5.131&access_token=e954287faaa675dc6b387fe3ad1459ad89fba3235eaf0d02a4cd7dc2bdccd51c8881c0b23663593f22aca&user_id=70259283&message=тыеблан");
+                    
+                    
             }
             // Возвращаем "ok" серверу Callback API
             return Ok("ok");
