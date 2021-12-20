@@ -22,8 +22,8 @@ namespace BOT.Controllers
 		/// Объект, инициировавший событие
 		/// Структура объекта зависит от типа уведомления
 		/// </summary>
-		[JsonProperty("message")]
-		public Array Message { get; set; }
+		[JsonProperty("object")]
+		public JObject Object { get; set; }
 
 
 		/// <summary>
