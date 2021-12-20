@@ -39,10 +39,10 @@ namespace Bot.Controllers
                     return Ok("ae02c630");
                 case "message_new":
 
-                    return Json(updates.Object);
-                    //return Content($"https://api.vk.com/method/messages.send?v=5.131&access_token=e954287faaa675dc6b387fe3ad1459ad89fba3235eaf0d02a4cd7dc2bdccd51c8881c0b23663593f22aca&user_id=70259283&message=тыеблан");
-                    
-                    
+                    //return Json(updates.Object);
+                    return Content($"https://api.vk.com/method/messages.send?v=5.131&access_token=e954287faaa675dc6b387fe3ad1459ad89fba3235eaf0d02a4cd7dc2bdccd51c8881c0b23663593f22aca&user_id=70259283&message=тыеблан&random_id=0");
+
+
             }
             // Возвращаем "ok" серверу Callback API
             return Ok("ok");
