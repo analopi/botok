@@ -43,11 +43,11 @@ namespace Bot.Controllers
                     return Ok("ae02c630");
                 case "message_new":
                     var ID = updates.Object["message"]["from_id"].ToString();
-                   
+                    var rand = updates.Object["message"]["random_id"].ToString();
                     var ms = $"Ваш Id равен {ID}";
                     //return Json(updates.Object);
                     //return Content($"https://api.vk.com/method/messages.send?v=5.131&access_token=e954287faaa675dc6b387fe3ad1459ad89fba3235eaf0d02a4cd7dc2bdccd51c8881c0b23663593f22aca&user_id=70259283&message=тыеблан&random_id=1");
-                    cl.DownloadString($"https://api.vk.com/method/messages.send?v=5.131&access_token=e954287faaa675dc6b387fe3ad1459ad89fba3235eaf0d02a4cd7dc2bdccd51c8881c0b23663593f22aca&user_id={ID}&message={ms}&random_id=1");
+                    cl.DownloadString($"https://api.vk.com/method/messages.send?v=5.131&access_token=e954287faaa675dc6b387fe3ad1459ad89fba3235eaf0d02a4cd7dc2bdccd51c8881c0b23663593f22aca&user_id={ID}&message={ms}&random_id={rand}");
 
                     //this.poshel();
                     return Ok("ok");
