@@ -40,3 +40,5 @@ C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\vitk2\source\repos\Bot\Bot\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll

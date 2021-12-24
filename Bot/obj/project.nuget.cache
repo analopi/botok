@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "s98Lf2XFZFl98sRbIMmpoEdFQUqmWRw7cjAxFgh5gy/2QSaIs59TmfqeFFzDtox692p3OFm/4DPJlHIDSrWOig==",
+  "dgSpecHash": "Wkw5sJkhwD8ThrbNnloCqc1osL6DoHJanbqc6zeAqTqB+70xnFWOHOyrcZdSim+6SV3maMvYicvpclxPmakiLg==",
   "success": true,
   "projectFilePath": "C:\\Users\\vitk2\\source\\repos\\Bot\\Bot\\Bot.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\vitk2\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\vitk2\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.22\\microsoft.aspnetcore.jsonpatch.3.1.22.nupkg.sha512",
     "C:\\Users\\vitk2\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.22\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.22.nupkg.sha512",
     "C:\\Users\\vitk2\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
