@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using Bot.Models;
+using ChatBotLaundry.Models;
 
 
  
-namespace Bot
+namespace ChatBotLaundry
 {
     public class Startup
     {

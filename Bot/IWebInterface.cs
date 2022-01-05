@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Bot
+namespace ChatBotLaundry
 {
     /// <summary>
     /// класс реализуемого интерфейса должен быть статическим

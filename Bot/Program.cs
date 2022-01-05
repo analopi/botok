@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Bot
+namespace ChatBotLaundry
 {
     public class Program
     {
