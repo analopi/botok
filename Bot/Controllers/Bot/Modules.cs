@@ -15,12 +15,12 @@ namespace ChatBotLaundry
                     user.Condition = button;
                     return;
                 case "op":
+                    user.Condition = button;
                     return;
                 case "ad":
                     user.Condition = button;
                     return;
                 case "re":
-                    user.Condition = button;
                     WebInterface.SendMessage(user.ID, "Отчетность:");
                     return;
                 case "infad":
