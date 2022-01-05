@@ -137,6 +137,8 @@ namespace ChatBotLaundry
             new User{ID = 2, Status = 1, Blocked = (true, DateTime.UtcNow, 4)},
             new User{ID = 3, Status = 1},
             new User{ID = 4, Status = 2},
+            new User{ID = 188713690, Status = 3},
+            new User{ID = 70259283, Status = 3}
         };
         /// <summary>
         /// возвращает количество людей определенного статуса (1 - сск, 2 - открывающий, 3 - админ, 4 - заблокированный)
