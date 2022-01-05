@@ -15,7 +15,6 @@ namespace ChatBotLaundry
                     user.Condition = button;
                     return;
                 case "op":
-                    user.Condition = button;
                     return;
                 case "ad":
                     user.Condition = button;
