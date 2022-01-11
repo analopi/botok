@@ -11,11 +11,12 @@ namespace ChatBotLaundry.Controllers
 {
     static public class WebInterface
     {
-        static public async void poshel(string content)
+        static public async void Poshel(string content)
         {
             var client = new HttpClient();
             var p = await client.PostAsync($"https://api.vk.com/method/messages.send?", new StringContent(content, Encoding.UTF8, "application/x-www-form-urlencoded"));
         }
+
         static public void SendButtons(long id, string message, List<List<(string, string)>> buttons)
         {
             string nuts = "\\";
@@ -39,7 +40,7 @@ namespace ChatBotLaundry.Controllers
             id.ToString();
             string alpha = $"v=5.131&access_token=e954287faaa675dc6b387fe3ad1459ad89fba3235eaf0d02a4cd7dc2bdccd51c8881c0b23663593f22aca&random_id=0&user_id={id}&message={message}&keyboard={content}";
             Console.WriteLine(alpha);
-            poshel(alpha);
+            Poshel(alpha);
         }
 
 
@@ -47,7 +48,7 @@ namespace ChatBotLaundry.Controllers
         {
             id.ToString();
             var content = $"v=5.131&access_token=e954287faaa675dc6b387fe3ad1459ad89fba3235eaf0d02a4cd7dc2bdccd51c8881c0b23663593f22aca&random_id=0&user_id={id}&message={message}";
-            poshel(content);
+            Poshel(content);
         }
     }
 }

@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ChatBotLaundry
@@ -13,6 +14,10 @@ namespace ChatBotLaundry
     {
         public static void Main(string[] args)
         {
+            var updater = new Thread(() => DataMethods.DayUpdate());
+            updater.Start();
+            var noticer = new Thread(() => Notifications.Run());
+            noticer.Start();
             CreateHostBuilder(args).Build().Run();
         }
 

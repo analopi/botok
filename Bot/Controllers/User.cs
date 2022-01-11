@@ -6,7 +6,7 @@ namespace ChatBotLaundry
 {
     //класс пользователя
     public class User
-    {   
+    {
         //общие поля
 
         public long ID;
@@ -20,7 +20,7 @@ namespace ChatBotLaundry
         /// <summary>
         /// 1 - сск, 2 - открывающий, 3 - админ, по умолчанию 0 - клиент
         /// </summary>
-        public int Status{ get { return status; } set { status = value; } }
+        public int Status { get { return status; } set { status = value; } }
 
         //служебные поля
         private string condition = "st";
@@ -28,7 +28,7 @@ namespace ChatBotLaundry
         public List<TimeNote> notes;
 
         //поля для клиента
-        public int[] note = new [] {0, 0, 0};
+        public int[] note = new[] { 0, 0, 0 };
 
         //поля для открывающего
         public int[] opnote = new[] { 0, 0 };
@@ -36,14 +36,15 @@ namespace ChatBotLaundry
         /// список записанных на определенное время пользователей
         /// </summary>
         public List<long> OpenerIdsList;
-        
+
         public int OpenedTimes;
         /// <summary>
         /// список времени открытия
         /// </summary>
         public List<TimeSpan> OpenerTime;
-        public TimeSpan AverageOpenerTime { 
-            get 
+        public TimeSpan AverageOpenerTime
+        {
+            get
             {
                 var av = TimeSpan.Zero;
                 foreach (var t in OpenerTime)
@@ -65,5 +66,4 @@ namespace ChatBotLaundry
             return ID.ToString() + ' ' + Status.ToString();
         }
     }
-
 }

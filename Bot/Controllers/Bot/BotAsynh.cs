@@ -7,11 +7,11 @@ using ChatBotLaundry.Controllers;
 
 namespace ChatBotLaundry
 {
-    class BotAsynh 
+    class BotAsynh
     {
-        public static void BotRun(User user, string button, string msg)
+        public static void Run(User user, string button, string msg)
         {
-            
+
             switch (user.Status)
             {
                 case 0:
@@ -120,7 +120,7 @@ namespace ChatBotLaundry
                     WebInterface.SendButtons(user.ID, "Подтверждение", GetButtons.Infadc());
                     return;
                 case "time":
-                    WebInterface.SendButtons(user.ID, Data.WashesHoursToString(), GetButtons.Time());
+                    WebInterface.SendButtons(user.ID, WashesHoursToString(), GetButtons.Time());
                     return;
                 case "w":
                     WebInterface.SendButtons(user.ID, "Выберите количество машинок:", GetButtons.W());
@@ -265,58 +265,6 @@ namespace ChatBotLaundry
             }
         }
 
-        //методы клиента
-        internal static void RemoveNote( int selectedNote, List<TimeNote> notes)
-        {
-            var amount = notes[selectedNote].Amount;
-            //ищет индекс дня в списке дней для удаления записи
-            var index = Data.Days.FindIndex(delegate (Day day)
-            {
-                return day.Date == notes[selectedNote].Day.Date;
-            });
-            for (var i = 0; i < Data.WashesAmount; i++)
-            {
-                if (Data.Days[index].HoursWashesTable[notes[selectedNote].Time, i] == notes[selectedNote].UserID
-                    && amount != 0)
-                {
-                    Data.Days[index].HoursWashesTable[notes[selectedNote].Time, i] = 0;
-                    amount -= 1;
-                }
-            }
-            Data.Days[index].Notes.Remove(notes[selectedNote]);
-        }
-
-        //методы админа
-        internal static List<long> GetUsersIdsList(Predicate<User> condition)
-        {
-            var listUsers = Data.Users.FindAll(condition);
-            List<long> listIds = new List<long>();
-            foreach (var usr in listUsers)
-                listIds.Add(usr.ID);
-            return listIds;
-        }
-
-        internal static List<long> GetOpenerIdsList()
-        {
-            var day = Data.Days.Find(delegate (Day day)
-            {
-                return day.Date.Date == DateTime.Now.Date;
-            });
-            var timeIndex = day.WashesHours.FindIndex(delegate (int time)
-            {
-                var now = DateTime.UtcNow.Hour;
-                for (var i = 0; i < 3; i++)
-                    if (time == now - i)
-                        return true;
-                return false;
-            });
-            List<long> listIds = new List<long>();
-            for (var a = 0; a < Data.WashesAmount; a++)
-                if (!listIds.Contains(day.HoursWashesTable[timeIndex, a]))
-                    listIds.Add(day.HoursWashesTable[timeIndex, a]);
-            return listIds;
-        }
-
         internal static string ListToNumerableStringIdsList(List<long> list, string ob)
         {
             string stringListIds = "Список" + ob + "\n";
@@ -342,30 +290,13 @@ namespace ChatBotLaundry
                 stringListIds = "Нет записей";
             return stringListIds;
         }
-        /// <summary>
-        /// возвращает список записей для пользователя id или все записи 
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="all"></param>
-        /// <returns></returns>
-        internal static List<TimeNote> GetNotes(long id, bool all = false)
-        {
-            var notes = new List<TimeNote>();
-            var dayIndex = 0;
-            foreach (var day in Data.Days)
-            {
-                foreach (var note in day.Notes)
-                {
-                    note.dayForNotation = dayIndex;
-                    if (note.UserID == id || all)
-                    {
-                        notes.Add(note);
-                    }
-                }
-                dayIndex++;
-            }
-            return notes;
-        }
 
+        internal static string WashesHoursToString()
+        {
+            var washesHoursData = "";
+            foreach (var time in Data.WashesHours)
+                washesHoursData += time.ToTimezone().ToString() + ":00 \n";
+            return washesHoursData;
+        }
     }
 }

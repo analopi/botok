@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ChatBotLaundry
 {
@@ -19,5 +18,13 @@ namespace ChatBotLaundry
             "ССК",
             "Открывающий",
             "Администратор"};
+
+        public static int ToTimezone(this int time)
+        {
+            var newtime = time + Timezone;
+            if (newtime >= 24)
+                newtime -= 24;
+            return newtime;
+        }
     }
 }
