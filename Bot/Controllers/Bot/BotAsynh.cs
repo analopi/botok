@@ -97,7 +97,7 @@ namespace ChatBotLaundry
                     return;
                 case "add":
                     WebInterface.SendMessage(user.ID, ListToNumerableStringIdsList(user.adminIdsList.Item1, " пользователей"));
-                    WebInterface.SendButtons(user.ID, "Введите id пользователя", GetButtons.Back());
+                    WebInterface.SendButtons(user.ID, "Введите ссылку на диалог с пользователем начинающуюся с https://vk.com/im?sel=", GetButtons.Back());
                     return;
                 case "del":
                     WebInterface.SendMessage(user.ID, ListToNumerableStringIdsList(user.adminIdsList.Item1, " пользователей"));
