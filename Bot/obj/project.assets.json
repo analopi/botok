@@ -921,20 +921,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\516\\.nuget\\packages\\": {}
+    "C:\\Users\\vitk2\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\516\\Source\\Repos\\botok\\Bot\\Bot.csproj",
+      "projectUniqueName": "C:\\Users\\vitk2\\source\\repos\\Bot\\Bot\\Bot.csproj",
       "projectName": "Bot",
-      "projectPath": "C:\\Users\\516\\Source\\Repos\\botok\\Bot\\Bot.csproj",
-      "packagesPath": "C:\\Users\\516\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\516\\Source\\Repos\\botok\\Bot\\obj\\",
+      "projectPath": "C:\\Users\\vitk2\\source\\repos\\Bot\\Bot\\Bot.csproj",
+      "packagesPath": "C:\\Users\\vitk2\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vitk2\\source\\repos\\Bot\\Bot\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\516\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\vitk2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -994,7 +999,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }
