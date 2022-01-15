@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using static ChatBotLaundry.Program;
-using ChatBotLaundry.Controllers;
 
 namespace ChatBotLaundry
 {
-    class BotAsynh
+    class BotAsynh 
     {
         public static void Run(User user, string button, string msg)
         {
-
+            
             switch (user.Status)
             {
                 case 0:
@@ -274,21 +273,23 @@ namespace ChatBotLaundry
                 stringListIds += i.ToString() + ". https://vk.com/im?sel=" + item.ToString() + "\n";
                 i++;
             }
+            if (list.Count == 0)
+                stringListIds = "Нет записей";
             return stringListIds;
         }
 
         internal static string ListToNumerableNotesStringList(List<TimeNote> list, string ob)
         {
-            string stringListIds = "Список" + ob + "\n";
+            string stringListNotes = "Список" + ob + "\n";
             var i = 0;
             foreach (var item in list)
             {
-                stringListIds += i.ToString() + ". " + item.ToString() + "\n";
+                stringListNotes += i.ToString() + ". " + item.ToString() + "\n";
                 i++;
             }
             if (list.Count == 0)
-                stringListIds = "Нет записей";
-            return stringListIds;
+                stringListNotes = "Нет записей";
+            return stringListNotes;
         }
 
         internal static string WashesHoursToString()
